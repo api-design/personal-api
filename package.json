@@ -1,0 +1,22 @@
+{
+  "name": "apidesign",
+  "version": "0.0.1",
+  "description": "apidesign",
+  "main": "app.js",
+  "scripts": {
+    "test": "./scripts/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unboxit/apidesign.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unboxit/apidesign/issues"
+  },
+  "homepage": "https://github.com/unboxit/apidesign",
+  "dependencies": {
+    "coffee-script": "~1.7.1"
+  }
+}
