@@ -1,21 +1,21 @@
 {
-  "name": "apidesign",
+  "name": "personalapi",
   "version": "0.0.1",
-  "description": "apidesign",
+  "description": "Personal API",
   "main": "app.js",
   "scripts": {
-    "test": "./scripts/test"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/unboxit/apidesign.git"
+    "url": "git://github.com/api-design/personal-api.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unboxit/apidesign/issues"
+    "url": "https://github.com/api-design/personal-api/issues"
   },
-  "homepage": "https://github.com/unboxit/apidesign",
+  "homepage": "https://github.com/api-design/personal-api",
   "dependencies": {
     "coffee-script": "~1.7.1"
   }
