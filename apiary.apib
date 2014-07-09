@@ -1,35 +1,81 @@
-HOST: http://www.google.com/
+FORMAT: 1A
+HOST: http://www.google.com
 
---- Personal API v1 ---
----
-Welcome to the our sample API documentation. All comments can be written in (support [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax)
----
+# Personal API v1
+http://personal.apiary-mock.com
 
---
-Shopping Cart Resources
-The following is a section of resources related to the shopping cart
---
-List products added into your shopping-cart. (comment block again in Markdown)
-GET /v2/shopping-cart
-< 200
-< Content-Type: application/json
-{ "items": [
-{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.55 }
-] }
+# Group Skills
+## /v1/skills
+### GET
+List all skills
+
+    Sample Requests:
+    [GET] http://personal.apiary-mock.com/v1/skills
+
++ Response 200 (application/json)
+
+        [
+            { "id": 1, "name": "HTML" }, 
+            { "id": 2, "name": "CSS"}
+        ]
+
+### POST
+Create a skill 
+
+    Sample Requests:
+    [POST] http://personal.apiary-mock.com/v1/skills
+
++ Request (application/json)
+
+        { "name": "JavaScript" }
+
++ Response 201 (application/json)
+
+        { "id": 3, "name": "JavaScript" }
+
+## /v1/skills/{id}
+
++ Parameters
+    + id (required, number, `1`) ... numeric value
+
+### GET
+Retrieve a skill
+
+    Sample Requests:
+    [POST] http://personal.apiary-mock.com/v1/skills/2
+
++ Response 200 (application/json)
+
+    + Body
+
+            { "id": 2, "name": "CSS" }
+
+### DELETE
+Remove a skill
+
+    Sample Requests:
+    [DELETE] http://personal.apiary-mock.com/v1/skills/2
+
++ Response 204 (application/json)
 
 
-Save new products in your shopping cart
-POST /v2/shopping-cart
-> Content-Type: application/json
-{ "product":"1AB23ORM", "quantity": 2 }
-< 201
-< Content-Type: application/json
-{ "status": "created", "url": "/shopping-cart/2" }
+# Group INFO
 
+## Allowed HTTPs requests:
 
--- Payment Resources --
-This resource allows you to submit payment information to process your *shopping cart* items
-POST /v2/payments
-{ "cc": "12345678900", "cvc": "123", "expiry": "0112" }
-< 200
-{ "receipt": "/payment/receipt/1" }
+    [POST]:     To create a resource
+    [GET]:      To read a resource or list of resources
+    [PUT]:      To update a resource
+    [DELETE]:   To delete a resource
+
+## Description of usual server responses
+
+    - 200 `OK` - the request was successful.
+    - 201 `Created` - the request was successful and a resource was created.
+    - 204 `No Content` - the request was successful but there is no representation to return (i.e. the response is empty).
+    - 400 `Bad Request` - the request could not be understood or was missing required parameters.
+    - 401 `Unauthorized` - authentication failed or user doesn't have permissions for requested operation.
+    - 403 `Forbidden` - access denied.
+    - 404 `Not Found` - resource was not found
+    - 405 `Method Not Allowed` - requested method is not supported for resource.
+    - 409 `Conflict` - the request could not be completed due to a conflict with the current state of the resource.
