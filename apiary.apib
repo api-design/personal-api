@@ -38,43 +38,43 @@ Create a skill
 ## /skills/{id}
 
 + Parameters
-    + id (required, number, `1`) ... numeric value
+    + id (required, number, `3`) ... numeric value
 
 ### GET
 Retrieve a skill
 
     Sample Requests:
-    [POST] http://personal.apiary-mock.com/skills/2
+    [POST] http://personal.apiary-mock.com/skills/3
 
 + Response 200 (application/json)
 
     + Body
 
-            { "id": 2, "name": "CSS" }
+            { "id": 3, "name": "JavaScript" }
 
 ### PUT
 Update a skill
 
     Sample Requests:
-    [PUT] http://personal.apiary-mock.com/skills/2
+    [PUT] http://personal.apiary-mock.com/skills/3
 
 + Request (application/json)
 
     + Body
 
-            { "name": "CSS3" }
+            { "name": "HTML5" }
 
 + Response 200 (application/json)
 
     + Body
 
-            { "id": 2, "name": "CSS3" }
+            { "id": 3, "name": "HTML5" }
 
 ### DELETE
 Remove a skill
 
     Sample Requests:
-    [DELETE] http://personal.apiary-mock.com/skills/1
+    [DELETE] http://personal.apiary-mock.com/skills/3
 
 + Request (application/json)
 
