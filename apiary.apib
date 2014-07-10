@@ -5,17 +5,18 @@ HOST: http://www.google.com
 http://personal.apiary-mock.com
 
 # Group Skills
-## /v1/skills
+
+## /skills
 ### GET
 List all skills
 
     Sample Requests:
-    [GET] http://personal.apiary-mock.com/v1/skills
+    [GET] http://personal.apiary-mock.com/skills
 
 + Response 200 (application/json)
 
         [
-            { "id": 1, "name": "HTML" }, 
+            { "id": 1, "name": "HTML" },
             { "id": 2, "name": "CSS"}
         ]
 
@@ -23,7 +24,7 @@ List all skills
 Create a skill 
 
     Sample Requests:
-    [POST] http://personal.apiary-mock.com/v1/skills
+    [POST] http://personal.apiary-mock.com/skills
 
 + Request (application/json)
 
@@ -33,7 +34,8 @@ Create a skill
 
         { "id": 3, "name": "JavaScript" }
 
-## /v1/skills/{id}
+
+## /skills/{id}
 
 + Parameters
     + id (required, number, `1`) ... numeric value
@@ -42,7 +44,7 @@ Create a skill
 Retrieve a skill
 
     Sample Requests:
-    [POST] http://personal.apiary-mock.com/v1/skills/2
+    [POST] http://personal.apiary-mock.com/skills/2
 
 + Response 200 (application/json)
 
@@ -50,13 +52,33 @@ Retrieve a skill
 
             { "id": 2, "name": "CSS" }
 
+### PUT
+Update a skill
+
+    Sample Requests:
+    [PUT] http://personal.apiary-mock.com/skills/2
+
++ Request (application/json)
+
+    + Body
+
+            { "name": "CSS3" }
+
++ Response 200 (application/json)
+
+    + Body
+
+            { "id": 2, "name": "CSS3" }
+
 ### DELETE
 Remove a skill
 
     Sample Requests:
-    [DELETE] http://personal.apiary-mock.com/v1/skills/2
+    [DELETE] http://personal.apiary-mock.com/skills/1
 
-+ Response 204 (application/json)
++ Request (application/json)
+
++ Response 204
 
 
 # Group INFO
