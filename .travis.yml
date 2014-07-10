@@ -2,7 +2,9 @@ language: "node_js"
 node_js:
   - "0.10"
 before_install:
-  - "npm install -g dredd"
-  - "cd apimock && dpd"
+  - "npm install -g deployd dredd"
 services:
   - mongodb
+script:
+ - npm run server
+ - npm test
