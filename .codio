@@ -1,0 +1,20 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+    		"start apidocs": "bundle exec apiary preview --path apiary.apib --server --port 4000",
+        "start mongodb": "parts start mongodb",
+    		"start dpd": "cd ~/workspace/apimock && dpd"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Project Index (static)": "https://{{domain}}/{{index}}",
+        "Current File (static)": "https://{{domain}}/{{filepath}}",
+    		"DPD Dashboard": "https://{{domain}}:2403/dashboard",
+    		"API Docs": "http://{{domain}}:4000/",
+        "Box URL": "http://{{domain}}:3000/",
+        "Box URL SSL": "https://{{domain}}:9500/"
+  }
+}
