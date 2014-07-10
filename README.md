@@ -2,7 +2,7 @@ personal-api
 =========
 
 [![Build Status](https://travis-ci.org/gdumitrescu/personal-api.svg?branch=master)](https://travis-ci.org/gdumitrescu/personal-api)
-[![Build Status](https://api.shippable.com/projects/53bd6a506f40c905040596c9/badge/master)](https://www.shippable.com/projects/53bd6a506f40c905040596c9/builds/history)
+[![Build Status](https://api.shippable.com/projects/53be1ead4606d01e00d9f67e/badge/master)](https://www.shippable.com/projects/53be1ead4606d01e00d9f67e)
 
 API Design using apiary.io blueprint
 
