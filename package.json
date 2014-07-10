@@ -4,7 +4,7 @@
   "description": "Personal API",
   "main": "app.js",
   "scripts": {
-    "test": "dredd apiary.apib http://personal.apiary-mock.com --names --sorted --details --reporter dot"
+    "test": "dredd apiary.apib http://localhost:2403 --names --sorted --details --reporter dot"
   },
   "repository": {
     "type": "git",
