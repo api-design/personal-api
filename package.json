@@ -4,6 +4,7 @@
   "description": "Personal API",
   "main": "app.js",
   "scripts": {
+    "server": "cd apimock && dpd &",
     "test": "dredd apiary.apib http://localhost:2403 --names --sorted --details --reporter dot"
   },
   "repository": {
