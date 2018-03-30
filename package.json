@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/api-design/personal-api",
   "dependencies": {
-    "coffee-script": "~1.7.1"
+    "coffee-script": "~1.12.0"
   }
 }
